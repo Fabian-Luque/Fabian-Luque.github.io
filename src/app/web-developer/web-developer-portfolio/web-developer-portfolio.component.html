@@ -1,0 +1,44 @@
+<app-loading></app-loading>
+<div class="page-wraper">
+	<!-- header -->
+    <app-header1 [data]="profile"></app-header1>
+    <!-- header END -->
+	<app-page-banner [data]="page_banner"></app-page-banner>
+  <app-social-bar></app-social-bar>
+
+	<div class="content-body">
+		<div class="content-body-inner">
+			<!-- About Info -->
+			<div class="section-full">
+
+			</div>
+			<div class="section-full">
+				<div class="section-head m-b20">
+					<h2 class="title text-uppercase">Un poco de <span class="text-gradient">Mi Trabajo</span></h2>
+				</div>
+				<div class="clearfix">
+					<ul id="masonry" class="dlab-gallery-listing gallery lightgallery row sp40">
+						<ng-template ngFor let-portfolio [ngForOf]="portfolios">
+            <li class="card-container col-xl-4 col-lg-6 col-md-6 col-sm-6 {{portfolio.filter_class}} wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.6s">
+							<div class="dlab-box dlab-gallery-box">
+								<div class="dlab-media">
+									<img src="assets/images/projects/{{portfolio.image}}" alt=""/>
+
+									<span data-exthumbimage="assets/images/projects/{{portfolio.image}}" data-src="assets/images/projects/{{portfolio.src_image}}" class="check-km" title="{{portfolio.title}}">
+
+										<i class="la la-plus"></i>
+									</span>
+								</div>
+								<div class="dlab-info">
+									<h4 class="title">{{portfolio.title}}</h4>
+									<span>{{portfolio.category}}</span>
+								</div>
+							</div>
+						</li>
+            </ng-template>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

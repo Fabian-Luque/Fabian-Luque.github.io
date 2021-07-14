@@ -1,0 +1,26 @@
+<div class="row sp40">
+  <div class="col-xl-4 col-lg-6 col-md-6 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s" *ngFor="let icons of icon_box">
+    <div class="icon-bx-wraper service-box m-b40 contact-box" [attr.data-content]='icons.title'>
+      <div class="icon-content">
+        <h4 class="dlab-tilte text-uppercase"><i class="las {{icons.icon_class}} text-gradient"></i> {{icons.title}}</h4>
+        <p [innerHTML]="icons.description"></p>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="col-xl-4 col-lg-6 col-md-6 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.4s">
+    <div class="icon-bx-wraper service-box m-b40 contact-box" data-content="Email">
+      <div class="icon-content">
+        <h4 class="dlab-tilte text-uppercase"><i class="las la-envelope-open text-gradient"></i> Email</h4>
+        <p><a href="javascript:void(0);">info@example.com</a><br/><a href="javascript:void(0);">info@example.com</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-4 col-lg-6 col-md-12 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.6s">
+    <div class="icon-bx-wraper service-box m-b40 contact-box" data-content="Phone">
+      <div class="icon-content">
+        <h4 class="dlab-tilte text-uppercase"><i class="las la-phone-volume text-gradient"></i> Phone</h4>
+        <p>(+1) 123 456 7890<br/>(+91) 423 547 8909</p>
+      </div>
+    </div>
+  </div> -->
+</div>

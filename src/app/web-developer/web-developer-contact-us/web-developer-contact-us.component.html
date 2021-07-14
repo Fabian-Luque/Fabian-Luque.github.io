@@ -1,0 +1,68 @@
+<app-loading></app-loading>
+<div class="page-wraper">
+	<!-- header -->
+    <app-header1 [data]="profile"></app-header1>
+    <!-- header END -->
+	<app-page-banner [data]="page_banner"></app-page-banner>
+  <app-social-bar></app-social-bar>
+
+	<div class="content-body">
+		<div class="content-body-inner">
+
+			<!-- About Info -->
+			<div class="section-full">
+				<div class="section-head">
+					<h2 class="title text-uppercase">Como podria <span class="text-gradient">Ayudarte</span>?</h2>
+				</div>
+				<div class="contact-form">
+					<form method="post" class="dzForm dezPlaceAni" action="script/contact.php">
+						<div class="dzFormMsg"></div>
+						<input type="hidden" value="Contact" name="dzToDo" >
+						<div class="row">
+							<div class="col-sm-4">
+								<div class="form-group">
+									<i class="las la-user text-gradient"></i>
+									<label>Nombre</label>
+									<input name="dzName" type="text" required class="form-control ">
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="form-group">
+									<i class="las la-envelope-open text-gradient"></i>
+									<label>Correo</label>
+									<input name="dzEmail" type="email" class="form-control" required >
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="form-group">
+									<i class="las la-file-alt text-gradient"></i>
+									<label>Asunto</label>
+									<input name="dzSubject" type="text" class="form-control" required >
+								</div>
+							</div>
+							<div class="col-sm-12">
+								<div class="form-group">
+									<i class="las la-envelope-open text-gradient"></i>
+									<label>Mensaje</label>
+									<textarea name="dzMessage" rows="4" class="form-control" required ></textarea>
+								</div>
+							</div>
+							<div class="col-md-12 m-b20 m-xs-b0 ">
+								<div class="g-recaptcha" data-sitekey="6LefsVUUAAAAADBPsLZzsNnETChealv6PYGzv3ZN" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
+								<input class="form-control d-none" style="display:none;" data-recaptcha="true" required data-error="Please complete the Captcha">
+							</div>
+							<div class="col-md-12">
+								<button name="submit" type="submit" value="Submit" class="site-button button-gradient button-md radius-no">Enviar</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<!-- Contact Info -->
+			<div class="section-full content-inner">
+				<app-icon-box></app-icon-box>
+			</div>
+		</div>
+	</div>
+</div>
