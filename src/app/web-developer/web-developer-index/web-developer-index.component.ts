@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewEncapsulation } from '@angular/core';
+import Typewriter from 't-writer.js'
 declare  var jQuery:  any;
 declare  var chinese:  any;
 
@@ -40,6 +41,28 @@ export class WebDeveloperIndexComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('init');
+
+    const target = document.querySelector('.type');
+    console.log(target);
+
+    const options = {
+      loop: true,
+      typeColor: 'white',
+      typeSpeed: 150,
+      deleteSpeed: 150,
+      cursorColor: 'white'
+    };
+    new Typewriter(target, options)
+      .type(this.member.designation)
+      .rest(1000)
+      .remove(13)
+      .type('Developer')
+      .rest(1000)
+      .start();
+
+
+
 	  (function ($) {
       /* setTimeout(function(){ */
 
@@ -95,12 +118,6 @@ export class WebDeveloperIndexComponent implements OnInit {
             }
 
             setInterval(draw, 33);
-
-
-
-
-
-
 
       /* }, 500);   */
 

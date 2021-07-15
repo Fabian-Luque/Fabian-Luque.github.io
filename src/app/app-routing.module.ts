@@ -20,8 +20,8 @@ const routes: Routes = [
           {path: 'portfolio', component: WebDeveloperPortfolioComponent},
           {path: 'resume', component: WebDeveloperResumeComponent},
 
-          {path: 'blog', component: BlogComponent},
-          {path: 'blog-single', component: BlogSingleComponent},
+          // {path: 'blog', component: BlogComponent},
+          // {path: 'blog-single', component: BlogSingleComponent},
 
           {path: '**', component: Page404Component},
 
